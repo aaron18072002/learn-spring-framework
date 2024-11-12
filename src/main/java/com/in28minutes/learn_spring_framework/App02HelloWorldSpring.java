@@ -1,5 +1,7 @@
 package com.in28minutes.learn_spring_framework;
 
+import java.util.List;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App02HelloWorldSpring {
@@ -19,6 +21,9 @@ public class App02HelloWorldSpring {
 		
 		var copyOfRanga = context.getBean("person");
 		System.out.println(copyOfRanga.toString());
+		
+		List<String> beanNames = List.of(context.getBeanDefinitionNames());
+		beanNames.stream().forEach(name -> System.out.println(name));
 		
 		context.close();
 	}

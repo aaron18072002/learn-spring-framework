@@ -8,7 +8,7 @@ public class GameRunner {
 	}
 	
 	public void run() {
-		System.out.println(this.game + " started!");
+		System.out.println(this.game.toString() + " started!");
 		
 		this.game.up();
 		this.game.down();

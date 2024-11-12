@@ -12,6 +12,9 @@ public class App02HelloWorldSpring {
 		var bean = context.getBean("name"); 
 		System.out.println(bean.toString());
 		
+		var rangeBean = context.getBean("ranga");
+		System.out.println(rangeBean.toString());
+		
 		context.close();
 	}
 }

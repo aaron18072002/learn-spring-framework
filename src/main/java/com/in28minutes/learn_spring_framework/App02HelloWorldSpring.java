@@ -9,11 +9,16 @@ public class App02HelloWorldSpring {
 				new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 		
 		//2: Config things that we want Spring manage - @Configuration
-		var bean = context.getBean("name"); 
-		System.out.println(bean.toString());
 		
-		var rangeBean = context.getBean("ranga");
-		System.out.println(rangeBean.toString());
+		var rangaPerson = context.getBean("rangaPerson");
+		System.out.println(rangaPerson.toString());
+		
+		var rangaName = context.getBean("rangaName"); 
+		var rangaAge = context.getBean("rangaAge");
+		var rangaAddress = context.getBean("rangaAddress");
+		
+		var copyOfRanga = context.getBean("person");
+		System.out.println(copyOfRanga.toString());
 		
 		context.close();
 	}

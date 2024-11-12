@@ -8,6 +8,11 @@ public class GameRunner {
 	}
 	
 	public void run() {
-		this.game.run();
+		System.out.println(this.game + " started!");
+		
+		this.game.up();
+		this.game.down();
+		this.game.right();
+		this.game.left();
 	}
 }
